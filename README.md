@@ -1,5 +1,4 @@
 # DeepLearningStudy
-造轮子万岁。
 
 
 由于本人比较佛系，看心情随缘更新。

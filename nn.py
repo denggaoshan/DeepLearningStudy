@@ -1,5 +1,5 @@
 import numpy as np
-from Layers import LinearLayer, Relu
+from Layers import LinearLayer, Relu, Sigmoid
 from LossFunction import MSELoss
 
 np.random.seed(0)

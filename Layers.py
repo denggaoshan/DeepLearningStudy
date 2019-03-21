@@ -14,7 +14,7 @@ class LinearLayer:
 
     """
         X:  输入数据,(N X input_D）的矩阵
-        返回值：    (N X output_D) 的矩阵，传往下一层
+        返回值：    (N X output_D）的矩阵，传往下一层
     """
     def forward(self, X):
         assert X.shape[1] == self._W.shape[0]
@@ -49,3 +49,16 @@ class Relu:
     def backward(self, X, grad):
         assert X.shape == grad.shape
         return np.where(X > 0, X, 0) * grad
+
+
+class Sigmoid():
+    def __init__(self):
+        pass
+
+    def forward(self, X):
+        return 1/(1+np.exp(-X))
+
+    def backward(self, X, grad):
+        assert X.shape == grad.shape
+        p = 1/(1+np.exp(-X))
+        return  p * (1 - p) * grad

@@ -51,7 +51,7 @@ for i in range(MAX_ITERATION):
     if i % 200 == 0:
         print(loss)
     if loss < 0.001:
-        print("训练完成！")
+        print("训练完成！ 第%d次迭代" %(i))
         break
 
 #将训练好的参数拼成一个网络模型
@@ -64,12 +64,4 @@ result = predict(model, X)
 print("预测数据1")
 print(X)
 print("预测结果1")
-print(result)
-
-X = np.array([[2,2],[-1,-1],[2,-1],[-1,2]])
-result = predict(model, X)
-print("-----")
-print("预测数据2")
-print(X)
-print("预测结果2")
 print(result)
